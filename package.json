@@ -1,0 +1,56 @@
+{
+  "name": "ufo-demo",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Richard B. Wagner <mathews.kyle@gmail.com>",
+  "homepage": "http://ufodemo.com",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/breckwagner/ufodemo.com.git"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.7",
+    "@fortawesome/fontawesome-free-brands": "^5.0.12",
+    "@fortawesome/fontawesome-free-solid": "^5.0.12",
+    "@fortawesome/react-fontawesome": "^0.0.19",
+    "gatsby": "next",
+    "gatsby-plugin-typography": "^1.7.18",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-helmet": "^5.2.0",
+    "styled-components": "next",
+    "typography": "^0.16.17",
+    "typography-theme-moraga": "^0.15.10"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "predeploy": "yarn run build",
+    "deploy": "yarn run deploy:github",
+    "deploy:github": "gh-pages -d public",
+    "serve": "gatsby serve",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./node_modules/ && rm -rf ./.cache/",
+    "clean:agro": "rm -rf ./node_modules/ ./.cache/ ./public/ yarn.lock"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.5.1",
+    "caniuse-db": "^1.0.30000835",
+    "gh-pages": "^1.1.0"
+  },
+  "peerDependencies": {
+    "gatsby-cli": "^1.1.41-4"
+  },
+  "private": true,
+  "workspaces": {
+    "nohoist": [
+      "gatsby"
+    ]
+  }
+}

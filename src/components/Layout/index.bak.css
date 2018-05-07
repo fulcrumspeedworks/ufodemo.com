@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,500|Source-Sans-Pro');
+:root {
+  --font-family: 'Source-Sans-Pro', Helvetica, sans-serif;
+  --font-family-fixed: 'Courier New', monospace;
+  --font-weight: 300;
+  --font-weight-bold: 600;
+  --letter-spacing: 0.025em;
+  --letter-spacing-alt: 0.25em;
+  --color-bg: #242943;
+  --color-bg-alt: #2a2f4a;
+  --color-fg: #ffffff;
+  --color-fg-bold: #ffffff;
+  --color-fg-light: rgba(244, 244, 255, 0.2);
+  --color-border: rgba(212, 212, 255, 0.1);
+  --color-border-bg: rgba(212, 212, 255, 0.035);
+  --color-highlight: #9bf1ff;
+  --color-accent1: #6fc3df;
+  --color-accent2: #8d82c4;
+  --color-accent3: #ec8d81;
+  --color-accent4: #e7b788;
+  --color-accent5: #8ea9e8;
+  --color-accent6: #87c5a4;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  margin-top: 1vmin;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-family);
+  font-size: 3vmin;
+
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+#main {
+  display: flex;
+  flex: 1;
+}
+#main > article {
+  flex: 1;
+  order: 1;
+}
+#main > nav,
+#main > aside {
+  flex: 0 0 20vw;
+}
+#main > nav {
+  background: #D7E8D4;
+  order: 3;
+}
+#main > aside {
+  background: beige;
+  order: 2;
+}
+header, footer {
+  background: var(--color-bg-alt);
+  height: 20vh;
+  border-bottom: thin solid rgba(212,212,255,.1);
+}
+header, footer, article, nav, aside {
+  padding: 1em;
+}
+#main.alt {
+    border-bottom: thin solid rgba(212,212,255,.1);
+}
+
+a:link {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--color-highlight);
+}
+a:hover > strong {
+  background-color: var(--color-highlight);
+}
+
+a:active {
+  color: inherit;
+}
+
+a span svg > * {
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+a:hover span svg > * {
+  fill: var(--color-highlight);
+}
+
+a {
+  text-decoration: none;
+  transition: color .2s ease-in-out,
+  border-bottom-color .2s ease-in-out;
+}
